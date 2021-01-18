@@ -7,6 +7,9 @@
   },
   "author": "William Eteta Letshu",
   "license": "ISC",
+  "engines": {
+    "node": "14.15.1"
+  },
   "dependencies": {
     "body-parser": "^1.18.3",
     "ejs": "^2.6.1",
