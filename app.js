@@ -1,11 +1,11 @@
 //jshint esversion:6
-
+require('dotenv').config();
 const express = require("express");
 const _= require("lodash");
 const bodyParser = require("body-parser");
 const date = require(__dirname + "/date.js");
 const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://admin-William:Test123@cluster0.v6t19.mongodb.net/todolistDB', {useNewUrlParser: true, useUnifiedTopology: true,useFindAndModify:false});
+mongoose.connect(process.env.URI, {useNewUrlParser: true, useUnifiedTopology: true,useFindAndModify:false});
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
